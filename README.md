@@ -29,4 +29,6 @@
 # 组件
 - ORM https://github.com/go-gorm/gorm
 - Redis https://github.com/go-redis/redis
-- RocketMQ
+- RocketMQ https://github.com/apache/rocketmq-client-go
+- UUID https://github.com/satori/go.uuid
+- Log https://github.com/ian-kent/go-log/log

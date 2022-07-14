@@ -12,11 +12,12 @@ var Db *gorm.DB
 
 func Init() {
 	var err error
+	dbConf := conf.Conf.MySQL
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:3306)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		conf.Conf.UserName,
-		conf.Conf.Password,
-		conf.Conf.Host,
-		conf.Conf.Database,
+		dbConf.UserName,
+		dbConf.Password,
+		dbConf.Host,
+		dbConf.Database,
 	)
 	Db, err = gorm.Open(mysql.New(mysql.Config{
 		DSN:                       dsn,   // DSN data source name

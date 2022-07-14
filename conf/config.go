@@ -2,16 +2,20 @@ package conf
 
 import (
 	"fmt"
+	"github.com/ian-kent/go-log/log"
 	"gopkg.in/yaml.v2"
-	"log"
 	"os"
+	"path"
+	"path/filepath"
 	"seckil/util"
 )
 
 var Conf *Config
 
 type Config struct {
-	MySQL `yaml:"mysql"`
+	MySQL    `yaml:"mysql"`
+	Redis    `yaml:"redis"`
+	RocketMq `yaml:"rocketmq"`
 }
 
 type MySQL struct {
@@ -21,8 +25,21 @@ type MySQL struct {
 	Database string `yaml:"database"`
 }
 
+type Redis struct {
+	Host     string `yaml:"host"`
+	Password string `yaml:"password"`
+}
+
+type RocketMq struct {
+	Host string `yaml:"host"`
+	Port string `yaml:"port"`
+}
+
 func Init() {
-	parseYamlConfig("config.yml")
+	rootPath := util.GetRootPath()
+	confPath := path.Join(rootPath, "conf")
+	path := filepath.Join(confPath, "config.yml")
+	parseYamlConfig(path)
 }
 
 func parseYamlConfig(path string) {

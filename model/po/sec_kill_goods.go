@@ -1,13 +1,10 @@
 package po
 
-type SecKillOrder struct {
+type SecKillGoods struct {
 	Id         int64  `gorm:"primaryKey" json:"id" column:"id"`
-	OrderNo    string `json:"order_no" column:"order_no"`
-	UserId     string `json:"user_id" column:"user_id"`
 	SkuCode    string `json:"sku_code" column:"sku_code"`
-	SkuNum     int64  `json:"sku_num" column:"sku_num"`
+	Stock      int64  `json:"stock" column:"stock"`
 	CreateTime int64  `json:"create_time" column:"create_time"`
 	UpdateTime int64  `json:"update_time" column:"update_time"`
 	state      int64  `json:"state" column:"state"`
-	OrderState int64  `json:"order_state" column:"order_state"`
 }

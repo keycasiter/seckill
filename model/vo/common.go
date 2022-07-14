@@ -10,6 +10,12 @@ const (
 	//请求参数错误
 	ParamErrCode = "0002"
 	ParamErrMsg  = "请求参数错误"
+	//库存不足
+	StockNotEnoughCode = "0003"
+	StockNotEnoughMsg  = "库存不足"
+	//风控拦截
+	RiskRefuseCode = "0004"
+	RiskRefuseMsg  = "风控拦截"
 )
 
 type CommonResult struct {
@@ -44,5 +50,19 @@ func BuildParamErrResult() *CommonResult {
 	return &CommonResult{
 		Code: ParamErrCode,
 		Msg:  ParamErrMsg,
+	}
+}
+
+func BuildStockNotEnoughResult() *CommonResult {
+	return &CommonResult{
+		Code: StockNotEnoughCode,
+		Msg:  StockNotEnoughMsg,
+	}
+}
+
+func BuildRiskRefuseResult() *CommonResult {
+	return &CommonResult{
+		Code: RiskRefuseCode,
+		Msg:  RiskRefuseMsg,
 	}
 }

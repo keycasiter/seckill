@@ -1,7 +1,7 @@
 package conf
 
 import (
-	"log"
+	"github.com/ian-kent/go-log/log"
 	"testing"
 )
 

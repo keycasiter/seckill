@@ -4,6 +4,7 @@ import (
 	"seckil/conf"
 	"seckil/dal/mysql"
 	"seckil/dal/redis"
+	"seckil/mq"
 )
 
 func main() {
@@ -14,4 +15,6 @@ func main() {
 	mysql.Init()
 	//redis
 	redis.Init()
+	//mq
+	mq.Init()
 }

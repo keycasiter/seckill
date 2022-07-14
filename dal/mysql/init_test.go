@@ -1,12 +1,14 @@
 package mysql
 
 import (
-	"log"
+	"github.com/ian-kent/go-log/log"
+	"seckil/conf"
 	"seckil/model/po"
 	"testing"
 )
 
 func TestInit(t *testing.T) {
+	conf.Init()
 	Init()
 
 	order := &po.SecKillOrder{}

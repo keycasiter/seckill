@@ -3,3 +3,11 @@ mysql:
   password: bytedance
   host: 127.0.0.1
   database: test
+
+redis:
+  host: 127.0.0.1:6379
+  password:
+
+rocketmq:
+  host: 127.0.0.1
+  port: 9876

@@ -1,5 +1,4 @@
-package model
+package vo
 
 type GoodsInfoQueryReq struct {
-
 }

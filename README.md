@@ -12,12 +12,21 @@
     
       业务对象封装
   
-- dao
+- dal
 
-- service
+    数据持久层，使用GormV2与MySQL交互
 
-- method 
+- logic
+    
+    业务逻辑层，封装复杂业务逻辑
 
-- redis
+- method
+    
+    方法实现层，
 
 - mq 
+
+# 组件
+- ORM https://github.com/go-gorm/gorm
+- Redis https://github.com/go-redis/redis
+- RocketMQ

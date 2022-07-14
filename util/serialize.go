@@ -7,12 +7,6 @@ import (
 	"reflect"
 )
 
-const (
-	Unknow_Mode = iota
-	Json
-	Xml
-)
-
 var serializer Serializer
 
 func init() {
